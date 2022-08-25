@@ -2,11 +2,11 @@
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
 # UPDATED: 2022-08-05 22:36:19
-# : 6
+# DOMAIN-KEYWORD: 6
 # DOMAIN-SUFFIX: 662
-# : 4
-# 6: 1
-# : 6
+# IP-CIDR: 4
+# IP-CIDR6: 1
+# PROCESS-NAME: 6
 # TOTAL: 679
 payload:
   - DOMAIN-SUFFIX,0emm.com
@@ -671,20 +671,20 @@ payload:
   - DOMAIN-SUFFIX,zynamics.com
   - DOMAIN-SUFFIX,googledrive.com
   - DOMAIN-SUFFIX,googleusercontent.com
-  - ,appspot
-  - ,blogspot
-  - ,gmail
-  - ,google
-  - ,gstatic
-  - ,recaptcha
-  - ,172.110.32.0/21
-  - ,173.194.0.0/16
-  - ,216.73.80.0/20
-  - ,74.125.0.0/16
-  - 6,2620:120:e000::/40
-  - ,com.android.vending
-  - ,com.google.android.gms
-  - ,com.google.android.gsf
-  - ,com.google.android.play.games
-  - ,googledrivefs.exe
-  - ,backupandsync
+  - DOMAIN-KEYWORD,appspot
+  - DOMAIN-KEYWORD,blogspot
+  - DOMAIN-KEYWORD,gmail
+  - DOMAIN-KEYWORD,google
+  - DOMAIN-KEYWORD,gstatic
+  - DOMAIN-KEYWORD,recaptcha
+  - IP-CIDR,172.110.32.0/21
+  - IP-CIDR,173.194.0.0/16
+  - IP-CIDR,216.73.80.0/20
+  - IP-CIDR,74.125.0.0/16
+  - IP-CIDR6,2620:120:e000::/40
+  - PROCESS-NAME,com.android.vending
+  - PROCESS-NAME,com.google.android.gms
+  - PROCESS-NAME,com.google.android.gsf
+  - PROCESS-NAME,com.google.android.play.games
+  - PROCESS-NAME,googledrivefs.exe
+  - PROCESS-NAME,backupandsync
