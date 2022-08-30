@@ -11,7 +11,9 @@ rawGoogle = rawGoogle.replace("DOMAIN-SUFFIX,ggpht.cn","DOMAIN-SUFFIX,drive.goog
 rawGoogle = rawGoogle.replace("DOMAIN-SUFFIX,ggpht.com","DOMAIN-SUFFIX,googledrive.com")
 rawYoutube = rawYoutube.replace("IP-CIDR,172.110.32.0/21","").replace("- IP-CIDR,216.73.80.0/20","")
 rawYoutube = rawYoutube.replace("IP-CIDR,IP-CIDR6,2620:120:e000::/40","")
+rawYoutube = rawYoutube.replace("payload:","")
 result = rawGoogle.split("\n") + rawYoutube.split("\n")
+
 
 with open("./Google.yaml", "w") as f:
     f.write("\n".join(result))
