@@ -4,6 +4,6 @@ rawSpeedtest= requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_r
 
 result = rawSpeedtest.split("\n")
 
-with open("./Speedtest.yaml", "w") as f:
+with open("./clash/Speedtest.yaml", "w") as f:
     f.write("\n".join(result))
 
