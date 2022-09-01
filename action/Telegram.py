@@ -1,6 +1,6 @@
 import requests
 
-rawTelegram = requests.get("https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt").text
+rawTelegram = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml").text
 
 result = rawTelegram.split("\n")
 
