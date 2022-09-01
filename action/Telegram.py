@@ -4,5 +4,5 @@ rawTelegram = requests.get("https://raw.githubusercontent.com/Loyalsoldier/clash
 
 result = rawTelegram.split("\n")
 
-with open("./Telegram.yaml", "w") as f:
+with open("./clash/Telegram.yaml", "w") as f:
     f.write("\n".join(result))
