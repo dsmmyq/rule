@@ -13,5 +13,5 @@ for rawresult in [rawGoogle, rawGoogleDrive, rawGoogleVoice, rawGoogleSearch, ra
     result.extend([item.rstrip() for item in rawresult.split('\n') if not (item.startswith('#') or item.startswith('payload:'))])
 result_text = '\n'.join(result)
 
-with open("./Google.yaml", "w") as f:
+with open("./clash/Google.yaml", "w") as f:
     f.write("\n".join(result))
