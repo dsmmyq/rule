@@ -8,5 +8,5 @@ for rawresult in [rawNetflix, rawDisney]:
     result.extend([item.rstrip() for item in rawresult.split('\n') if not (item.startswith('#') or item.startswith('payload:'))])
 result_text = '\n'.join(result)
 
-with open("./GlobalMedia.yaml", "w") as f:
+with open("./clash/GlobalMedia.yaml", "w") as f:
     f.write("\n".join(result))
