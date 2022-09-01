@@ -7,14 +7,11 @@ rawGoogleSearch = requests.get("https://raw.githubusercontent.com/blackmatrix7/i
 rawGoogleEarth = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleEarth/GoogleEarth.yaml").text
 rawGoogleFCM = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.yaml").text
 rawYoutube = requests.get("https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml").text
-rawGoogleDrive = rawGoogleDrive.replace("payload:","")
-rawGoogleVoice = rawGoogleVoice.replace("payload:","")
-rawGoogleSearch = rawGoogleSearch.replace("payload:","")
-rawGoogleEarth = rawGoogleEarth.replace("payload:","")
-rawGoogleFCM = rawGoogleFCM.replace("payload:","")
-rawYoutube = rawYoutube.replace("payload:","")
-result = rawGoogle.split("\n") + rawYoutube.split("\n") + rawGoogleDrive.split("\n") + rawGoogleVoice.split("\n") + rawGoogleFCM.split("\n") + rawGoogleSearch.split("\n") + rawGoogleEarth.split("\n")
 
+result = ['payload:']
+for rawresult in [rawGoogleDrive, rawGoogleVoice, rawGoogleSearch, rawGoogleEarth, rawGoogleFCM, rawYoutube]:
+    result.extend([item.rstrip() for item in rawresult.split('\n') if not (item.startswith('#') or item.startswith('payload:'))])
+result_text = '\n'.join(result)
 
 with open("./Google.yaml", "w") as f:
     f.write("\n".join(result))
