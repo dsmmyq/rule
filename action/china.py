@@ -5,5 +5,5 @@ rawchina = rawchina.replace("server=/","").replace("/114.114.114.114","")
 
 result = rawchina.split("\n")
 
-with open("./china.text", "w") as f:
+with open("./china.txt", "w") as f:
     f.write("\n".join(result))
