@@ -543,6 +543,7 @@ payload:
   - DOMAIN-SUFFIX,jibemobile.com
   - DOMAIN-SUFFIX,kaggle.com
   - DOMAIN-SUFFIX,kaggle.io
+  - DOMAIN-SUFFIX,kaggleusercontent.com
   - DOMAIN-SUFFIX,keyhole.com
   - DOMAIN-SUFFIX,keytransparency.com
   - DOMAIN-SUFFIX,keytransparency.foo
